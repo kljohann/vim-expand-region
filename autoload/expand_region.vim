@@ -213,7 +213,7 @@ function! s:get_candidate_list()
     let l:count = 2
     let previous = i.length
     while 1
-      let test = l:count.i.text_object
+      let test = repeat(i.text_object, l:count)
       let candidate = s:get_candidate_dict(test)
       if candidate.length ==# 0
         break
